@@ -1,0 +1,119 @@
+$(function () {
+   $("#fullpage").fullpage({
+      navigation:true,
+      navigationPosition:"right",
+      navigationTooltips:["首页","视觉","交互","皮肤","功能","代办邮件","联系人邮件","科技","连接易信","马上体验"],
+
+      onLeave:function (index,next,direction) {
+         var num=index-1;
+         var num1=next-1;
+         // 进入动画
+         $(".section").eq(num1).find(".top-info").css({
+            top:"25px"
+         });
+         $(".section").eq(num1).find(".bg-mail-s").css({
+            bottom:"30px",
+            opacity:1
+         });
+         $(".section").eq(num1).find(".bg-mail-l").css({
+            bottom:"-90px",
+            opacity:1
+         });
+         $(".section").eq(num1).find(".bg-txt").css({
+            transform:"scale(1,1)",
+            opacity:1
+         });
+         $(".section").eq(num1).find(".des-info").css({
+            opacity:1
+         });
+         $(".section").eq(num1).find(".view-txt").css({
+            opacity:1,
+            transform:"scale(1,1)"
+         });
+         $(".section").eq(num1).find(".bg-web-s").css({
+            opacity:1,
+            marginLeft:"-608px"
+         });
+         $(".section").eq(num1).find(".bg-web-m").css({
+            opacity:1,
+            marginLeft:"310px"
+         });
+         $(".section").eq(num1).find(".bg-web-l").css({
+            opacity:1,
+            bottom:"-15%"
+         });
+         $(".section").eq(num1).find(".bg-mutual").css({
+            opacity:1
+         });
+         $(".section").eq(num1).find(".bg-mutual-l").css({
+            marginLeft:"-120px"
+         });
+         $(".section").eq(num1).find(".des-info-three").css({
+            marginLeft:"-200px"
+         });
+         $(".section").eq(num1).find(".bg-skin").css({
+            bottom:"11%"
+         });
+         $(".section").eq(num1).find(".bg-fn").css({
+            opacity:1
+         });
+         $(".section").eq(num1).find(".bg-fn").css({
+            opacity:1
+         });
+
+
+         // 离开动画
+         $(".section").eq(num).find(".top-info").css({
+            top:"-26px"
+         });
+         $(".section").eq(num).find(".bg-mail-s").css({
+            bottom:"-392px",
+            opacity:0
+         });
+         $(".section").eq(num).find(".bg-mail-l").css({
+            bottom:"-377px",
+            opacity:0
+         });
+         $(".section").eq(num).find(".bg-txt").css({
+            transform:"scale(0.5,0.5)",
+            opacity:0
+         });
+         $(".section").eq(num).find(".des-info").css({
+            opacity:0
+         });
+         $(".section").eq(num).find(".view-txt").css({
+            opacity:0,
+            transform:"scale(0.5,0.5)"
+         });
+         $(".section").eq(num).find(".bg-web-s").css({
+            opacity:0,
+            marginLeft:"-900px"
+         });
+         $(".section").eq(num).find(".bg-web-m").css({
+            opacity:0,
+            marginLeft:"640px"
+         });
+         $(".section").eq(num).find(".bg-web-l").css({
+            opacity:0,
+            bottom:"-80%"
+         });
+         $(".section").eq(num).find(".bg-mutual").css({
+            opacity:0
+         });
+         $(".section").eq(num).find(".bg-mutual-l").css({
+            marginLeft:"600px"
+         });
+         $(".section").eq(num).find(".des-info-three").css({
+            marginLeft:"-600px"
+         });
+         $(".section").eq(num).find(".bg-skin").css({
+            bottom:"-372px"
+         });
+         $(".section").eq(num).find(".bg-fn").css({
+            opacity:0
+         });
+      }
+
+
+   });
+});
